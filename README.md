@@ -1,3 +1,19 @@
+<p>Laradock Fork with some changes to make it easier to work with a remote vm (ensure firewall is locked to only allow traffic from your ip address)</p>
+<p>Differences</p>
+<ul>
+<li>Wildcard two level subdomain routing: Copy nginx/sites/all.conf.example to all.conf and modify accordingly. For example: site1.host.website.com will automatically point to site1 folder in the same webroot as laradock. We use certbot dns mode with cloudflare to generate wildcard certs</li>
+<li>added some aliases for laravel in aliases.sh</li>
+<li>More aliases for your .bashrc file to start and manage laradock:
+    <ul>
+    <li>alias lup='docker-compose -f ~/sites/laradock/docker-compose.yml up -d nginx mysql phpmyadmin redis workspace'</li>
+    <li>alias ldown='docker-compose -f ~/sites/laradock/docker-compose.yml down'</li>
+    <li>alias lin='docker-compose -f ~/sites/laradock/docker-compose.yml exec --user=laradock workspace zsh'</li>
+    <li>alias lngx='docker-compose -f ~/sites/laradock/docker-compose.yml exec nginx bash'</li>
+    <li>alias lbuild='docker-compose -f ~/sites/laradock/docker-compose.yml build'</li>
+    </ul>
+</li>
+</ul>
+
 <p align="center">
     <img src="/.github/home-page-images/laradock-logo.jpg?raw=true" alt="Laradock Logo"/>
 </p>
@@ -314,5 +330,3 @@ You can sponsor us using any of the methods below:
 [silver-sponsors-href]: https://opencollective.com/laradock#contributors
 [bronze-sponsors-src]: https://opencollective.com/laradock/tiers/bronze-sponsors.svg?avatarHeight=48&width=890&button=false&isActive=true
 [bronze-sponsors-href]: https://opencollective.com/laradock#contributors
-
-
