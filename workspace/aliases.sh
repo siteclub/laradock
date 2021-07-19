@@ -148,3 +148,15 @@ function fs() {
 		du $arg .[^.]* ./*;
 	fi;
 }
+
+alias a='php artisan'
+alias am='php artisan migrate'
+alias ads='php artisan db:seed --class='
+alias amfs='php artisan migrate:fresh --seed'
+alias cin='composer install'
+alias cup='composer update'
+alias cre='composer require'
+alias nup='npm update'
+alias nwa='npm run watch'
+alias nin='npm install'
+alias sail='bash vendor/bin/sail'
