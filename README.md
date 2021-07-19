@@ -1,7 +1,7 @@
 <p>Laradock Fork with some changes to make it easier to work with a remote vm (ensure firewall is locked to only allow traffic from your ip address)</p>
 <p>Differences</p>
 <ul>
-<li>Wildcard two level subdomain routing: Copy nginx/sites/all.conf.example to all.conf and modify accordingly. For example: site1.host.website.com will automatically point to site1 folder in the same webroot as laradock. We use certbot dns mode with cloudflare to generate wildcard certs</li>
+<li>Wildcard two level subdomain routing: Copy nginx/sites/all.conf.example to all.conf and modify accordingly. For example: site1.host.website.com will automatically point to site1 folder in the same webroot as laradock. We use certbot dns mode with cloudflare to generate wildcard certs and point a wildcard second level subdomain to the server</li>
 <li>added some aliases for laravel in aliases.sh</li>
 <li>More aliases for your .bashrc file to start and manage laradock:
     <ul>
